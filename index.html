@@ -2,8 +2,17 @@
 <html>
 <head>
   <title>My Termux Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4A90E2">
+  <link rel="manifest" href="/manifest.json">
 </head>
 <body>
   <h1>Hello from Termux + GitHub Pages!</h1>
+  <p>PWA-enabled site</p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>
